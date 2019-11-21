@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  spitz:
+    build:
+      context: .
+      target: dev
+    image: jaegeon/spitz:dev
+    container_name: spitz-dev
+    volumes:
+      - .:/app
+    command: bash
+    stdin_open: true
+    tty: true
